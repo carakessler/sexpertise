@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 20160910220422) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "spina_accounts", force: :cascade do |t|
     t.string   "name"
     t.string   "address"
@@ -138,7 +141,7 @@ ActiveRecord::Schema.define(version: 20160910220422) do
     t.integer  "position"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.index ["structure_id"], name: "index_spina_structure_items_on_structure_id"
+    t.index ["structure_id"], name: "index_spina_structure_items_on_structure_id", using: :btree
   end
 
   create_table "spina_structure_parts", force: :cascade do |t|
@@ -149,8 +152,8 @@ ActiveRecord::Schema.define(version: 20160910220422) do
     t.string   "title"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.index ["structure_item_id"], name: "index_spina_structure_parts_on_structure_item_id"
-    t.index ["structure_partable_id"], name: "index_spina_structure_parts_on_structure_partable_id"
+    t.index ["structure_item_id"], name: "index_spina_structure_parts_on_structure_item_id", using: :btree
+    t.index ["structure_partable_id"], name: "index_spina_structure_parts_on_structure_partable_id", using: :btree
   end
 
   create_table "spina_structures", force: :cascade do |t|
