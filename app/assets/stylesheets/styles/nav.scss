@@ -1,0 +1,17 @@
+.nav {
+	// font-size: 33px;
+}
+
+.nav-item { 
+	display: inline-block;
+	padding: 0 35px;
+	border: 1px solid #33cccc;
+
+	// &:first-child {
+	// 	padding: 0;
+	// }
+
+	a{
+		text-decoration: none;
+	}
+}
