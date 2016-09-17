@@ -36,7 +36,12 @@ module Spina
       title:              'test',
       page_partable_type: 'Spina::Text'
     }]
+      name:               'lisa-bio',
+      title:              'Lisas Bio',
+      page_partable_type: 'Spina::Text'
+    },
 
+    ]
 
     self.structures = [{
       name: 'publication_list',
