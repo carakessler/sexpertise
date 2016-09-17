@@ -1,0 +1,31 @@
+.about-us { 
+	.bio {
+		margin: auto;
+    display: block;
+    padding: 16px 0px;
+
+		&:not(:first-child) {
+			float: right;
+			max-width: 50%;
+		}
+	}
+
+	.text {
+		padding: 24px;	
+	}
+
+	.headshot { 
+		max-height: 330px;
+		border-radius: 5px;
+		margin: auto;
+		padding: 0;
+		display: block;
+	}
+
+	.title {
+		font-size: 22px;
+		font-weight: 300;
+		text-align: center;
+		padding-bottom: 16px;
+	}
+}

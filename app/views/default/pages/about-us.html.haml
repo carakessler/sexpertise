@@ -1,3 +1,17 @@
-%h1= @page.title
-= @page.content(:text).try(:html_safe)
-
+.about-us
+	.mission-statement= @page.content(:mission_statement).try(:html_safe)
+	.bio
+		=image_tag "rachel.png", :class => "headshot"
+		.text 
+			.title 
+				Rachel Hoffman, LSMW <br />
+				Co-founder
+			= @page.content(:rachel_bio).try(:html_safe)
+	
+	.bio
+		=image_tag "lisa.png", :class => "headshot"
+		.text 
+			.title
+				Lisa Hochberger, M.Ed. <br />
+				Co-founder
+			= @page.content(:lisa_bio).try(:html_safe)

@@ -1,11 +1,14 @@
 !!!
 %html
-  %head
-    %title= current_account.name
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
-    = javascript_include_tag 'application', 'data-turbolinks-track' => true
-    = csrf_meta_tags
-  %body
-    .container
-      = render 'default/shared/navigation'
-      = yield
+	%head
+		%title= current_account.name
+		= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+		= javascript_include_tag 'application', 'data-turbolinks-track' => true
+		= csrf_meta_tags
+	%header 
+		.nav-container 
+			= image_tag "sexpertise.png", :class => "logo"
+			= render 'default/shared/navigation'
+	%body
+		.container
+			= yield
