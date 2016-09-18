@@ -1,7 +1,7 @@
 ::Spina::Theme.register do |theme|
 
   theme.name = 'default'
-  theme.title = 'Demo theme'
+  theme.title = 'Default theme'
 
   theme.page_parts = [{
     name:           'line',
@@ -31,11 +31,7 @@
     name:           'publication_list',
     title:          'Structure',
     partable_type:  'Spina::Structure'
-  }, {
-    name:           'color',
-    title:          'Color',
-    partable_type:  'Spina::Color'
-  },
+  }, 
   {
     name:               'text',
     title:              'Text',
@@ -61,13 +57,23 @@
     name: 'publication_list',
     structure_parts: [{
       name:           'title',
-      title:          'Title',
+      title:          'Article Title',
       partable_type:  'Spina::Line'
     }, {
-      name:           'description',
-      title:          'Description',
+      name:           'summary',
+      title:          'Article Summary',
       partable_type:  'Spina::Text'
-    }]
+    },{
+      name:           'image',
+      title:          'Article Image',
+      partable_type:  'Spina::Photo'
+    },
+    {
+      name:           'article_url',
+      title:          'Article URL',
+      partable_type:  'Spina::Line'
+    }
+  ]
   }]
 
   theme.layout_parts = [{
