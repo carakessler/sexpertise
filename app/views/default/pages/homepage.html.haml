@@ -1,7 +1,7 @@
 %h3{:class => "heading"} A REVOLUTIONARY WAY TO EDUCATE ABOUT SEXUALITY
 
 .link
-	%a{ :href => "/webinar", :title => "Meet the Team" }
+	%a{ :href => "/8-session-webinar", :title => "Meet the Team" }
 		%strong
 			8 Session Webinar
 
@@ -11,20 +11,3 @@
 .random
 	%p Disrupt jean shorts viral hella meh, plaid cupidatat magna art party. Echo Park adipisicing literally narwhal. Williamsburg leggings church-key, craft beer forage cornhole jean shorts blue bottle pariatur. Officia sapiente bespoke, locavore plaid cray voluptate deep v ex vinyl tote bag chillwave swag occaecat. Sed banh mi 3 wolf moon single-origin coffee quis tempor. Hoodie pitchfork pork belly aliqua, shabby chic elit consequat freegan ethical try-hard mixtape. Schlitz banjo deep v ullamco blog, umami nulla sint elit skateboard Godard odio. Disrupt jean shorts viral hella meh, plaid cupidatat magna art party. Echo Park adipisicing literally narwhal. Williamsburg leggings church-key, craft beer forage cornhole jean shorts blue bottle pariatur. Officia sapiente bespoke, locavore plaid cray voluptate deep v ex vinyl tote bag chillwave swag occaecat. Sed banh mi 3 wolf moon single-origin coffee quis tempor. Hoodie pitchfork pork belly aliqua, shabby chic elit consequat freegan ethical try-hard mixtape. Schlitz banjo deep v ullamco blog, umami nulla sint elit skateboard Godard odio.
 
-.Sign_Form
-	%h1 Sign Up
-	= form_for(:user, :url => {:controller => 'users', :action => 'create'}) do |f|
-		%p
-			Username: #{f.text_field :username}
-		%p
-			Email: #{f.text_field :email}
-		%p
-			Password: #{f.password_field :password}
-		%p
-			Password Confirmation: #{f.password_field :password_confirmation}
-		= f.submit :Signup
-	- if @user.errors.any?
-		%ul.Signup_Errors
-			- for message_error in @user.errors.full_messages
-				%li
-					* #{message_error}

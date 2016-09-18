@@ -30,8 +30,11 @@ gem 'bcrypt', '~> 3.1.7'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'spina-template'
-gem 'spina'
+gem 'spina-template', '~> 0.4.0'
+gem 'spina', '~>0.10.0'
+
+gem 'globalize', github: 'digitalreflow/globalize', ref: '016ebe8fc2ccc23431f0212c5d3a886199124d4f'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
