@@ -7,17 +7,18 @@
 	background-color: white;
 	width: 100%;
 	z-index: 999;
+	max-height: 56px;
 }
 .nav {
 	display: inline;
 	float: right;
-	padding: 8px;
+	padding: 8px 8px 0;
 	margin-bottom: 0;
 }
 
 .nav-item { 
 	display: inline-block;
-	padding: 8px 32px;
+	padding: 0 32px;
 	line-height: 2.5;
 	margin-bottom: 0;
 	

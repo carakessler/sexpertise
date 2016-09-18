@@ -7,7 +7,7 @@
 		= csrf_meta_tags
 	%header 
 		.nav-container 
-			= image_tag "sexpertise.png", :class => "logo"
+			= link_to image_tag( 'sexpertise.png'), '/', :class => "central-img"
 			= render 'default/shared/navigation'
 	%body
 		.container

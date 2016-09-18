@@ -1,0 +1,32 @@
+.workshops {
+	padding: 24px 0;
+}
+
+.workshop {
+	display: inline-block;
+	max-width: 29%;
+	padding: 16px;
+	vertical-align: top;
+}
+
+.workshop-image {
+	border-radius: 6px;
+	max-height: 180px;
+	display: block;
+	margin: auto;
+}
+
+.clearfix {
+	overflow: auto;
+	display: inline-block;
+}
+
+.workshop-header {
+	font-size: 22px;
+	text-align: center;
+}
+
+.workshop-summary {
+	font-style: 14px;
+	text-align: justify;
+}

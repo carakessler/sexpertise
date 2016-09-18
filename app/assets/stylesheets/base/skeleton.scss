@@ -29,12 +29,14 @@
 /* Grid
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
+@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700';
+
 .container {
   position: relative;
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 20px 20px;
   box-sizing: border-box; }
 .column,
 .columns {
@@ -125,7 +127,7 @@ body {
   font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.6;
   font-weight: 400;
-  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Source Sans Pro", "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #2c3e50; }
 
 /* Typography
