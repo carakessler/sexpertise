@@ -4,7 +4,7 @@
 }
 .nav-container {
 	position: fixed;
-	background-color: white;
+	background-color: #fafafa;
 	width: 100%;
 	z-index: 999;
 	max-height: 56px;
@@ -33,6 +33,12 @@
 }
 
 .logo {
-	padding: 8px 0; 
+	padding-left: 8px;
+  width: 150px;
 }
 
+@media (max-width:940px) { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
+	.nav-container {
+		background-color: red;
+	}
+}

@@ -4,31 +4,12 @@
   theme.title = 'Default theme'
 
   theme.page_parts = [{
-    name:           'line',
-    title:          'Line',
-    partable_type:  'Spina::Line'
-  }, {
-    name:           'text',
-    title:          'Text',
-    partable_type:  'Spina::Text'
-  }, {
-    name:           'photo',
-    title:          'Photo',
-    partable_type:  'Spina::Photo'
-  }, {
-    name:           'photo_collection',
-    title:          'Photo collection',
-    partable_type:  'Spina::PhotoCollection'
-  }, {
-    name:           'attachment',
-    title:          'Attachment',
-    partable_type:  'Spina::Attachment'
-  }, {
-    name:           'attachment_collection',
-    title:          'Attachment collection',
-    partable_type:  'Spina::AttachmentCollection'
-  }, {
     name:           'publication_list',
+    title:          'Structure',
+    partable_type:  'Spina::Structure'
+  }, 
+  {
+    name:           'webinar_list',
     title:          'Structure',
     partable_type:  'Spina::Structure'
   }, 
@@ -63,27 +44,35 @@
       name:           'summary',
       title:          'Article Summary',
       partable_type:  'Spina::Text'
-    },{
-      name:           'image',
-      title:          'Article Image',
-      partable_type:  'Spina::Photo'
     },
     {
       name:           'article_url',
       title:          'Article URL',
       partable_type:  'Spina::Line'
+    },
+    {
+      name:           'image',
+      title:          'Article Image',
+      partable_type:  'Spina::Photo'
     }
   ]
-  }]
-
-  theme.layout_parts = [{
-    name:           'line',
-    title:          'Line',
-    partable_type:  'Spina::Line'
-  }, {
-    name:           'color',
-    title:          'Color',
-    partable_type:  'Spina::Color'
+  },
+  {
+    name: 'webinar_list',
+    structure_parts: [{
+      name:           'date',
+      title:          'Webinar Date',
+      partable_type:  'Spina::Line'
+    }, {
+      name:           'title',
+      title:          'Webinar Title',
+      partable_type:  'Spina::Line'
+    },{
+      name:           'assignment',
+      title:          'Webinar Assignment',
+      partable_type:  'Spina::Text'
+    }
+  ]
   }]
 
   theme.view_templates = [{
@@ -119,7 +108,7 @@
     name: 'webinar',
     title: 'Webinar',
     description: '8 session webinar',
-    page_parts: []
+    page_parts: ['webinar_list']
   }
 ]
 

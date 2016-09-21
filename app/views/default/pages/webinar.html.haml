@@ -1,1 +1,17 @@
-%h1='Webinar Schedule' 
+.webinar
+	=image_tag "webinar.jpg", :class => "central-img"
+
+	.container
+		%h3{:class => "heading"}Webinar Schedule
+		- i = 1
+		- @page.content(:webinar_list).structure_items.each do |part|
+			.session
+				.date 
+					Week #{i}:
+					= part.content(:date).try(:html_safe) 
+				.title
+					= part.content(:title).try(:html_safe)
+					.assignment
+						= part.content(:assignment).try(:html_safe)
+					- i = i + 1
+

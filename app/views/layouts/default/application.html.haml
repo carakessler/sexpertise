@@ -7,11 +7,12 @@
 		= csrf_meta_tags
 	%header 
 		.nav-container 
-			= link_to image_tag( 'sexpertise.png'), '/', :class => "central-img"
+			= link_to root_path do 
+				= image_tag 'logo.png', :class => "logo"
 			= render 'default/shared/navigation'
+
 	%body
-		.container
-			- flash.each do |message_type, message|
-				%div{:class => "alert alert-#{message_type}"}= message
-			= yield
-			= debug(params) if Rails.env.development?
+		- flash.each do |message_type, message|
+			%div{:class => "alert alert-#{message_type}"}= message
+		= yield
+		-# = debug(params) if Rails.env.development?
