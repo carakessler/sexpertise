@@ -10,35 +10,3 @@
       = f.submit "Log in", class: "btn btn-primary"
     %p
       New user? #{link_to "Sign up now!", signup_path}
-
-  .wrapper
-    .checkout.container
-      .content
-        %header
-          %h1
-            Hi,
-            = succeed "Let's" do
-              %br/
-          %p
-            Make a test payment with Braintree using PayPal or a card
-        = form_tag("/checkouts", method: "post", id: "payment-form") do
-          %section
-            .bt-drop-in-wrapper
-              #bt-dropin
-            %label{:for => "amount"}
-              %span.input-label Amount
-              .input-wrapper.amount-wrapper
-                %input#amount{:min => "1", :name => "amount", :placeholder => "Amount", :type => "tel", :value => "10"}/
-          %button.button{:type => "submit"}
-            %span Test Transaction
-  %script{:src => "https://js.braintreegateway.com/js/braintree-2.27.0.min.js"}
-  :javascript
-    (function () {
-      var checkout = new Demo({
-        formID: 'payment-form'
-      });
-      var client_token = "#{@client_token}";
-      braintree.setup(client_token, "dropin", {
-        container: "bt-dropin"
-      });
-    })()
