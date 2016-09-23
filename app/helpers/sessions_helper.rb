@@ -7,17 +7,18 @@ module SessionsHelper
 
   # Returns the current logged-in user (if any).
   def current_user
-  	# puts session
-    # @current_user ||= Spina::User.find_by(id: session[:user_id])
+    @current_user ||= Spina::User.find_by(id: session[:user_id])
   end
 
   # Returns true if the user is logged in, false otherwise.
   def logged_in?
-    return true
+    !current_user.nil?
   end
 
   # Logs out the current user.
   def log_out
+    puts('yo fucker')
+    puts
     session.delete(:user_id)
     @current_user = nil
   end

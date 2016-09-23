@@ -8,7 +8,9 @@ Rails.application.routes.draw do
   delete '/logout',  to: 'sessions#destroy', as: 'logout'
   get '/checkouts', to: 'checkouts#new', as: 'checkouts'
 
-  resources :users, :checkouts,  only: [:new, :create, :show]
+  root :to => 'spina/pages#homepage'
+
+  resources :users, :checkouts
 
   mount Spina::Engine => '/'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
