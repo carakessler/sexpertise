@@ -109,6 +109,12 @@
     title: 'Webinar',
     description: '8 session webinar',
     page_parts: ['webinar_list']
+  },
+  {
+    name: 'singles-webinar',
+    title: 'Singles Webinar',
+    description: '6 session webinar',
+    page_parts: ['webinar_list']
   }
 ]
 
@@ -145,6 +151,12 @@
     {
       name:           'webinar',
       title:          '8 session webinar',
+      deletable:      true,
+      view_template:  'webinar'
+    },
+    {
+      name:           'singles-webinar',
+      title:          '6 session webinar',
       deletable:      true,
       view_template:  'webinar'
     }

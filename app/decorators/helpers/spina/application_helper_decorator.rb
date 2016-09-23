@@ -12,7 +12,7 @@ module Spina
 
 		# Returns true if the user is logged in, false otherwise.
 		def logged_in?
-			!current_user.nil?
+			return false 
 		end
 		# Logs out the current user.
 		def log_out

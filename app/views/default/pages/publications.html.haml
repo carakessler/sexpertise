@@ -1,0 +1,13 @@
+.publications
+	=image_tag "publications.jpg", :class => "central-img"
+
+	.container
+		%h3{:class => "heading"}Publications
+		- @page.content(:publication_list).structure_items.each do |part|
+			.title 
+				= part.content(:title).try(:html_safe) 
+			.summary
+				= part.content(:summary).try(:html_safe)
+			.image
+				= part.content(:image).try(:html_safe)
+

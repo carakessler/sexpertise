@@ -1,6 +1,12 @@
 .webinar
 	=image_tag "webinar.jpg", :class => "central-img"
 
+	.ctas
+		.cta
+			%a{ :href => "/checkouts/new", :title => "Sign up" }
+				Sign up with <br />
+				SEXPERTISE
+
 	.container
 		%h3{:class => "heading"}Webinar Schedule
 		- i = 1
@@ -15,3 +21,9 @@
 						= part.content(:assignment).try(:html_safe)
 					- i = i + 1
 
+	.as-seen-in
+		%h5{:class => "as-seen-in-head"} As Seen In
+		=image_tag "body-by-bk.png", :class => "as-seen-in-img"
+		=image_tag "dwm.png", :class => "as-seen-in-img"
+		=image_tag "mndfl.png", :class => "as-seen-in-img"
+		=image_tag "steep_rock.png", :class => "as-seen-in-img"
