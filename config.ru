@@ -8,7 +8,7 @@ run Rails.application
  
 Sass::Plugin.options[:syntax] = :scss
 
-Braintree::Configuration.environment = :sandbox
-Braintree::Configuration.merchant_id = "2j7frdcg4775m9g5"
-Braintree::Configuration.public_key = "kkxmr5r88hjpvxjp"
-Braintree::Configuration.private_key = "f575b6580450c93b868e2368f4ea37bd"
+Braintree::Configuration.environment = :production
+Braintree::Configuration.merchant_id = "wbygj344hp542skh"
+Braintree::Configuration.public_key = "55tm3tfcq5r9v6qq"
+Braintree::Configuration.private_key = "7ee50010d7c4db425e4d7d4458445a30"

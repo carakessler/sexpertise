@@ -69,3 +69,18 @@
 	  margin-bottom: 48px;
 	}
 }
+
+// braintree pages
+.payments {
+	h1 {
+		text-align: center;
+	}
+	.transaction-table {
+		margin: auto;
+		max-width: 320px;
+		padding: 24px;
+	}
+	.button {
+		display: block;
+	}
+}
