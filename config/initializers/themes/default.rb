@@ -167,31 +167,31 @@
   theme.custom_pages = [{
       name:           'homepage',
       title:          'Homepage', 
-      deletable:      false,
+      deletable:      true,
       view_template:  'homepage'
     },
     {
       name:           'about-us',
       title:          'About Us',
-      deletable:      false,
+      deletable:      true,
       view_template:  'about-us'
     },    
     {
       name:           'publications',
       title:          'Publications',
-      deletable:      false,
+      deletable:      true,
       view_template:  'publications'
     },
     {
       name:           'customized-workshops',
       title:          'Customized workshops',
-      deletable:      false,
+      deletable:      true,
       view_template:  'customized-workshops'
     },    
     {
       name:           'one-one-one-coaching',
       title:          'One-on-One Coaching',
-      deletable:      false,
+      deletable:      true,
       view_template:  'one-one-one-coaching'
     },    
     {
