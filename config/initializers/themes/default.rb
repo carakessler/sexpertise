@@ -10,7 +10,17 @@
   }, 
   {
     name:           'webinar_list',
-    title:          'Structure',
+    title:          'Webinar list',
+    partable_type:  'Spina::Structure'
+  },   
+  {
+    name:           'webinar_list_girls',
+    title:          'Webinar list - BOYS',
+    partable_type:  'Spina::Structure'
+  }, 
+  {
+    name:           'webinar_list_boys',
+    title:          'Webinar list - GIRLS',
     partable_type:  'Spina::Structure'
   }, 
   {
@@ -73,7 +83,43 @@
       partable_type:  'Spina::Text'
     }
   ]
-  }]
+  },
+  {
+  name: 'webinar_list_girls',
+    structure_parts: [{
+      name:           'date',
+      title:          'Webinar Date',
+      partable_type:  'Spina::Line'
+    }, {
+      name:           'title',
+      title:          'Webinar Title',
+      partable_type:  'Spina::Line'
+    },{
+      name:           'assignment',
+      title:          'Webinar Assignment',
+      partable_type:  'Spina::Text'
+    }
+  ]
+  },
+  {
+    name: 'webinar_list_boys',
+    structure_parts: [{
+      name:           'date',
+      title:          'Webinar Date',
+      partable_type:  'Spina::Line'
+    }, {
+      name:           'title',
+      title:          'Webinar Title',
+      partable_type:  'Spina::Line'
+    },{
+      name:           'assignment',
+      title:          'Webinar Assignment',
+      partable_type:  'Spina::Text'
+    }
+  ]
+  }
+
+  ]
 
   theme.view_templates = [{
     name: 'homepage',
@@ -114,7 +160,7 @@
     name: 'singles-webinar',
     title: 'Singles Webinar',
     description: '6 session webinar',
-    page_parts: ['webinar_list']
+    page_parts: ['webinar_list_boys', 'webinar_list_girls']
   }
 ]
 
@@ -158,7 +204,7 @@
       name:           'singles-webinar',
       title:          '6 session webinar',
       deletable:      true,
-      view_template:  'webinar'
+      view_template:  'singles-webinar'
     }
   ]
 

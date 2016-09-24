@@ -21,10 +21,20 @@ class CheckoutsController < ApplicationController
   def create
     amount = params["amount"] # In production you should not take amounts directly from clients
     nonce = params["payment_method_nonce"]
+    first_name = params["first_name"]
+    last_name = params["last_name"]
+    phone = params["phone_number"]
+    email = params["email_address"]
 
     result = Braintree::Transaction.sale(
-      amount: amount,
-      payment_method_nonce: nonce,
+      :amount => amount,
+      :payment_method_nonce => nonce,
+      :customer => {
+        :first_name => first_name ,
+        :last_name => last_name,
+        :phone => phone,
+        :email => email
+      }
     )
 
     if result.success? || result.transaction
@@ -41,15 +51,15 @@ class CheckoutsController < ApplicationController
 
     if TRANSACTION_SUCCESS_STATUSES.include? status
       result_hash = {
-        :header => "Sweet Success!",
+        :header => "Thank you for signing up!",
         :icon => "success",
-        :message => "Your test transaction has been successfully processed. See the Braintree API response and try again."
+        :message => "Your transaction has been successfully processed. Look out for an email from the Sexperts regarding your workshop."
       }
     else
       result_hash = {
         :header => "Transaction Failed",
         :icon => "fail",
-        :message => "Your test transaction has a status of #{status}. See the Braintree API response and try again."
+        :message => "Your test transaction has a status of #{status}. Please contact an admin if this is happening repeatedly."
       }
     end
   end
