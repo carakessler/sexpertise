@@ -7,8 +7,7 @@
 			.publication
 				%a{ :href => part.content(:article_url).try(:html_safe), :title => "Read more" }
 					.image
-						-# = part.content(:image).try(:html_safe)
-						=image_tag "cure.jpg", :class => "publication-image"
+						= image_tag part.content(:image).try(:file_url)
 					.text 
 						.title 
 							= part.content(:title).try(:html_safe) 
