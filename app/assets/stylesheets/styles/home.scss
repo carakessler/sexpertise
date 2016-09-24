@@ -1,11 +1,20 @@
 .heading {
 	text-align: center;
+	padding: 24px 0 0;
 }
 .ctas {
-	position: absolute;
-	top: 40%;
-	right: 32%;
-
+	background-image: image-url('homepage.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 650px;
+	.cta-buttons {
+		text-align: center;
+	}
+	.cta-logo {
+		padding: 120px 120px 24px;
+		margin: auto;
+		display: block;
+	}
 }
 .cta {
 	display: inline-block;
@@ -15,19 +24,21 @@
   font-size: 24px;
 	text-align: center;
 	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
-	background: #ECF0F1;
+	background: #EF4836;
 	border: 0;
-	border-bottom: 2px solid #e1e1e1;
+	border-bottom: 2px solid #C0392B;
 	border-radius: 5px;
 	cursor: pointer;
-	-webkit-box-shadow: inset 0 -2px #e1e1e1;
-	box-shadow: inset 0 -2px #e1e1e1;
+	box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);	
 	a {
 		color: #2c3e50;
     text-decoration: none;
     vertical-align: -webkit-baseline-middle;
     cursor: pointer;
 	}
+}
+.cta-logo {
+	max-width: 1000px;
 }
 
 .footer-icon {
@@ -70,17 +81,3 @@
 	}
 }
 
-// braintree pages
-.payments {
-	h1 {
-		text-align: center;
-	}
-	.transaction-table {
-		margin: auto;
-		max-width: 320px;
-		padding: 24px;
-	}
-	.button {
-		display: block;
-	}
-}

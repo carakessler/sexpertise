@@ -1,5 +1,6 @@
 .about-us
-	=image_tag "sea-feet.jpg", :class => "central-img"
+	.ctas
+		=image_tag "cta-logo.png", :class => "cta-logo"
 	.container 
 		.mission-statement= @page.content(:mission_statement).try(:html_safe)
 		.bio

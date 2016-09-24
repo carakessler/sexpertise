@@ -1,0 +1,44 @@
+.webinar-six
+	.ctas
+		=image_tag "cta-logo.png", :class => "cta-logo"
+		.cta-buttons
+			.cta
+				%a{ :href => "/checkouts/new", :title => "Sign up" }
+					Register for <br />
+					6 Session Singles Webinar 
+
+	.container
+		%h3{:class => "heading"}Webinar Schedule
+		.col
+			%h5{:class => "heading"}Workshops for Women 
+			- i = 1
+			- @page.content(:webinar_list_girls).structure_items.each do |part|
+				.session
+					.date 
+						Week #{i}:
+						= part.content(:date).try(:html_safe) 
+					.title
+						= part.content(:title).try(:html_safe)
+						.assignment
+							= part.content(:assignment).try(:html_safe)
+						- i = i + 1
+		.col
+			%h5{:class => "heading"}Workshops for Men 
+			- i = 1
+			- @page.content(:webinar_list_boys).structure_items.each do |part|
+				.session
+					.date 
+						Week #{i}:
+						= part.content(:date).try(:html_safe) 
+					.title
+						= part.content(:title).try(:html_safe)
+						.assignment
+							= part.content(:assignment).try(:html_safe)
+						- i = i + 1
+
+	.as-seen-in
+		%h5{:class => "as-seen-in-head"} As Seen In
+		=image_tag "body-by-bk.png", :class => "as-seen-in-img"
+		=image_tag "dwm.png", :class => "as-seen-in-img"
+		=image_tag "mndfl.png", :class => "as-seen-in-img"
+		=image_tag "steep_rock.png", :class => "as-seen-in-img"

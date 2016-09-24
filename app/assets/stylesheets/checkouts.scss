@@ -1,8 +1,67 @@
 // Place all the styles related to the Checkouts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// braintree pages
 .payments {
-	text-align: center;
-	margin: auto;
-	color: red;
+	.transaction-table {
+		margin: auto;
+		max-width: 320px;
+		padding: 24px;
+	}
+	.cta {
+		display: block;
+		float: right;
+   	a {
+			color: #2c3e50;
+	    text-decoration: none;
+	    vertical-align: -webkit-baseline-middle;
+	    cursor: pointer;
+		}
+	}
+	.ctas {
+		background: none;
+		height: auto;
+	}
+	.cta-logo {
+		padding: 0;
+	}
+	.log-in {
+		font-weight: 600;
+	}
+	.log-out {
+		font-size: 11px;
+	  font-weight: 600;
+	  line-height: 38px;
+	  letter-spacing: .1rem;
+	  text-transform: uppercase;
+	  text-decoration: none;
+  	color: #2c3e50;
+    text-decoration: none;
+    vertical-align: -webkit-baseline-middle;
+    cursor: pointer;
+    margin: 24px 24px 0;
+    padding: 0 16px;
+	}
+	.row {
+    max-width: 50%;
+    margin: auto;
+	}
+	.form-control {
+		width: 415px;
+	}
+	form {
+		margin-bottom: 0;
+	}
+	label {
+		padding-right: 24px;
+		display: inline-block;
+	}
+	input {    
+		width: 200px;
+	}
+	input[type="submit"]{
+		width: auto;
+		margin: 0 56px;
+	}
 }

@@ -1,0 +1,32 @@
+.publications {
+	.publication {
+		padding: 16px 0;
+	}
+	.ctas {
+		background-image: image-url('publications.png');
+		height: 600px;
+	}
+	.title { 
+		font-weight: 600;
+    font-size: 18px;
+	}
+	.publication-image {
+		height: 100px;
+    width: 116px;
+    border-radius: 6px;
+	}
+	.image {
+		display: inline-block;
+	}
+	.text {
+		display: inline-block;
+    max-width: 80%;
+    padding: 0 20px;
+	}
+	a {
+		color: #2c3e50;
+    text-decoration: none;
+    cursor: pointer;
+	}
+	
+}

@@ -1,3 +1,61 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.authentication {
+	.ctas {
+		background: none;
+		height: auto;
+	}
+	.cta-logo {
+		padding: 0;
+	}
+	.redirect {
+		margin: auto;
+    max-width: 90%;
+    font-size: 24px;
+    text-align: center;
+	}
+	.log-in {
+		font-weight: 600;
+	}
+	.log-out {
+		font-size: 11px;
+	  font-weight: 600;
+	  line-height: 38px;
+	  letter-spacing: .1rem;
+	  text-transform: uppercase;
+	  text-decoration: none;
+  	color: #2c3e50;
+    text-decoration: none;
+    vertical-align: -webkit-baseline-middle;
+    cursor: pointer;
+    margin: 24px 24px 0;
+    padding: 0 16px;
+	}
+	.row {
+    max-width: 25%;
+    margin: auto;
+	}
+	.form-control {
+		width: 415px;
+	}
+	form {
+		margin-bottom: 0;
+	}
+	label {
+		padding-right: 24px;
+	}
+	input, .form-control{    
+		width: 220px;
+	}
+	input[type="submit"]{
+		width: auto;
+    margin: 24px;
+  }
+  input[type="submit"].login-cta {
+  	margin: 0 56px 24px;
+  }
+  .new-user {
+  	text-align: center;
+  }
+}

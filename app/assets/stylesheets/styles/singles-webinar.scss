@@ -1,0 +1,40 @@
+.webinar-six {
+	.col { 
+		width: 50%;
+		float: right;
+	}
+	.ctas {
+		background-image: image-url('webinar.png');
+		height: 600px;
+	}
+
+	.date {
+		font-weight: 200;
+		font-size: 20px;
+		padding-bottom: 16px;
+		float: left;
+		&:after {
+			content: "";
+			width: 40%;
+			background-color: rgba(0,0,0,0.15);
+			height: 1px;
+			display: block;
+			margin-top: 4px;
+			margin-left: 40px;
+		}
+	}
+
+	.session {
+		padding: 16px 48px;
+	}
+
+	.title {
+		font-weight: 600;
+		padding: 4px 28px;
+		display: inline-block;
+  }
+
+	.assignment {
+		font-weight: 400;
+	}
+} 

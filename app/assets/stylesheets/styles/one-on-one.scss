@@ -1,4 +1,11 @@
 .one-on-one {
+	.ctas {
+		background-image: image-url('one-on-one.png');
+		height: 600px;
+		.cta-logo {
+			padding: 64px 120px 48px;
+		}
+	}
 	.one-one-one-cta {
 		text-align: center;
     font-weight: 600;

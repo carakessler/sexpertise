@@ -35,6 +35,7 @@ gem 'spina', '~>0.10.0'
 gem "braintree", "~> 2.66.0"
 
 gem 'dotenv', '~> 2.0'
+gem 'sprockets-rails', :require => 'sprockets/railtie'
 
 gem 'globalize', github: 'digitalreflow/globalize', ref: '016ebe8fc2ccc23431f0212c5d3a886199124d4f'
 

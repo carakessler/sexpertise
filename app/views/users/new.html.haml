@@ -1,7 +1,10 @@
 - provide(:title, 'Sign up')
-.container 
-	- if logged_in?
-		%h1 Sign up
+.container.authentication
+	.ctas
+		=image_tag "cta-logo.png", :class => "cta-logo"
+
+	- if !logged_in?
+		%h2{:class => "heading"} Sign up
 		.row
 			.col-md-6.col-md-offset-3
 				= form_for(@user, url: signup_path) do |f|
@@ -11,7 +14,8 @@
 					= f.email_field :email
 					= f.label :password
 					= f.password_field :password
-					= f.submit "Create my account", class: "btn btn-primary"
+					= f.submit "Create my account", class: "cta"
 	- else 
-		You are already logged in! To sign up for a new account, click #{link_to "here", logout_path, method: "delete"} to log out first .
-		Otherwise, go back to the #{link_to "homepage", root_path}
+		.redirect 
+			You're already logged in! To sign up for a new account, click #{link_to "here", main_app.logout_path, method: "delete"} to log out first.
+			Otherwise, go back to the #{link_to "homepage", root_path}
