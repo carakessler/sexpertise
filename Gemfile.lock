@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/ambethia/recaptcha.git
+  revision: 81a52adc6adeab535805bd701bd9d4e1b442495c
+  specs:
+    recaptcha (3.4.0)
+      json
+
+GIT
   remote: git://github.com/digitalreflow/globalize.git
   revision: 016ebe8fc2ccc23431f0212c5d3a886199124d4f
   ref: 016ebe8fc2ccc23431f0212c5d3a886199124d4f
@@ -256,6 +263,7 @@ DEPENDENCIES
   pg
   puma (~> 3.0)
   rails (~> 5.0.0, >= 5.0.0.1)
+  recaptcha!
   sass-rails (~> 5.0)
   spina (~> 0.10.0)
   spina-template (~> 0.4.0)

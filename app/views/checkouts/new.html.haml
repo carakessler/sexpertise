@@ -39,6 +39,8 @@
                 .input-wrapper.amount-wrapper
                   %input#amount{:min => "1", :name => "amount", :placeholder => "Amount", :type => "tel"}/
                   %input{:type => "submit", :value => "Purchase", :class => "cta"}/
+            = recaptcha_tags
+
     %script{:src => "https://js.braintreegateway.com/js/braintree-2.27.0.min.js"}
     :javascript
       (function () {
